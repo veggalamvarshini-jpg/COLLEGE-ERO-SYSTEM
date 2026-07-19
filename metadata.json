@@ -1,0 +1,6 @@
+{
+  "name": "College ERP System",
+  "description": "A high-fidelity full-stack Enterprise Resource Planning system for colleges, featuring student/faculty rosters, digital IDs, smart attendance, fee processing, exams, hostel occupancy, library management, placements, and an intelligent Gemini AI assistant.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

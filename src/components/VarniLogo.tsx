@@ -1,0 +1,120 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React from "react";
+
+interface VarniLogoProps {
+  className?: string;
+  size?: number;
+}
+
+export default function VarniLogo({ className = "", size = 48 }: VarniLogoProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 200 200"
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Background Teal Circle */}
+      <circle cx="100" cy="100" r="95" fill="#0b4566" />
+      
+      {/* Outer Dotted Ring */}
+      <circle
+        cx="100"
+        cy="100"
+        r="88"
+        fill="none"
+        stroke="#ffffff"
+        strokeWidth="1.5"
+        strokeDasharray="3,3"
+        opacity="0.8"
+      />
+      
+      {/* Inner Solid Ring */}
+      <circle
+        cx="100"
+        cy="100"
+        r="82"
+        fill="none"
+        stroke="#22d3ee"
+        strokeWidth="1"
+        opacity="0.5"
+      />
+
+      {/* Text Paths */}
+      <defs>
+        {/* Top Arc for Text */}
+        <path
+          id="textArcTop"
+          d="M 25,100 A 75,75 0 1,1 175,100"
+          fill="none"
+        />
+        {/* Bottom Arc for Text */}
+        <path
+          id="textArcBottom"
+          d="M 175,100 A 75,75 0 0,1 25,100"
+          fill="none"
+        />
+      </defs>
+
+      {/* Curved Text - VARNI INTERNATIONAL INSTITUTE */}
+      <text fill="#ffffff" fontSize="9.5" fontWeight="bold" letterSpacing="0.8" fontFamily="sans-serif">
+        <textPath href="#textArcTop" startOffset="50%" textAnchor="middle">
+          VARNI INTERNATIONAL INSTITUTE
+        </textPath>
+      </text>
+
+      {/* Curved Text - OF HOTEL MANAGEMENT */}
+      <text fill="#ffffff" fontSize="9.5" fontWeight="bold" letterSpacing="1" fontFamily="sans-serif">
+        <textPath href="#textArcBottom" startOffset="50%" textAnchor="middle">
+          OF HOTEL MANAGEMENT
+        </textPath>
+      </text>
+
+      {/* Dotted separators between top and bottom text */}
+      <circle cx="21" cy="100" r="2.5" fill="#22d3ee" />
+      <circle cx="179" cy="100" r="2.5" fill="#22d3ee" />
+
+      {/* Central Lion Head Emblem (White/Silver vector art) */}
+      <g transform="translate(100, 78) scale(0.38)">
+        {/* Lion Mane and Head Profile */}
+        <path 
+          d="M -40,-60 C -10,-70 20,-50 30,-30 C 40,-10 35,20 15,40 C 5,50 -15,55 -30,45 C -45,35 -50,10 -40,-15 C -35,-25 -25,-35 -40,-60 Z" 
+          fill="#ffffff" 
+        />
+        {/* Stylized lion facial curves and mane */}
+        <path 
+          d="M -25,-40 C -15,-45 -5,-40 0,-30 C 5,-20 5,-10 0,0 C -5,10 -15,15 -25,10 C -35,5 -38,-10 -30,-25 Z" 
+          fill="#0b4566" 
+        />
+        <path 
+          d="M -15,-25 C -10,-28 -5,-25 -2,-20 C 1,-15 1,-10 -2,-5 C -5,0 -10,3 -15,0 C -20,-3 -22,-10 -18,-18 Z" 
+          fill="#ffffff" 
+        />
+        {/* Crown of Lion Mane / Hair points */}
+        <path d="M-40,-58 L-45,-75 L-30,-62 L-20,-80 L-10,-60 L5,-75 L15,-55 Z" fill="#ffffff" />
+        {/* Beard and low mane curls */}
+        <path d="M-30,44 L-45,60 L-25,50 L-35,70 L-15,55 L-20,75 L-5,55 Z" fill="#ffffff" />
+      </g>
+
+      {/* Shaking Hands forming Wings */}
+      <g transform="translate(100, 128) scale(0.48)">
+        {/* Left wing sleeve */}
+        <path d="M -70,5 L -30,-5 L -10,10 L -30,25 Z" fill="#ffffff" />
+        {/* Right wing sleeve */}
+        <path d="M 70,5 L 30,-5 L 10,10 L 30,25 Z" fill="#22d3ee" />
+        {/* Handshake center */}
+        <circle cx="0" cy="8" r="14" fill="#ffffff" stroke="#0b4566" strokeWidth="2" />
+        <path d="M -10,4 L 10,12 M -8,12 L 8,4" stroke="#0b4566" strokeWidth="2.5" strokeLinecap="round" />
+        {/* Left wings */}
+        <path d="M -35,-5 L -75,-25 L -50,5 L -85,-10 L -40,15 L -90,5 L -30,22" fill="#ffffff" />
+        {/* Right wings */}
+        <path d="M 35,-5 L 75,-25 L 50,5 L 85,-10 L 40,15 L 90,5 L 30,22" fill="#22d3ee" />
+      </g>
+    </svg>
+  );
+}

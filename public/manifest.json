@@ -1,0 +1,25 @@
+{
+  "name": "Varni International Institute of Hotel Management",
+  "short_name": "Varni ERP",
+  "description": "Enterprise Academic Management Portal for Varni International Institute of Hotel Management.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b4566",
+  "theme_color": "#0b4566",
+  "orientation": "any",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/varni-logo.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/varni-logo.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
